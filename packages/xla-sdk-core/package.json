@@ -1,0 +1,38 @@
+{
+  "name": "xla-sdk-core",
+  "version": "0.3.6",
+  "description": "",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "keywords": [
+    "XLA"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist && tsc && cp -r src/generated dist/",
+    "codegen": "typechain --target ethers-v5 --out-dir ./src/generated './src/abi/*.json'"
+  },
+  "author": "Adam Petroff (BlockCzech)",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blockczechorg/xla-sdk.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blockczechorg/xla-sdk/issues"
+  },
+  "devDependencies": {
+    "@typechain/ethers-v5": "^10.2.0",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.1.1",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "bignumber.js": "^9.1.1",
+    "ethers": "^5.7.2"
+  },
+  "gitHead": "0006aedeb75320c5407969b766824c69dc15a514"
+}

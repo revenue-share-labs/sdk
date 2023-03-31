@@ -1,0 +1,37 @@
+{
+  "name": "xla-sdk-react",
+  "version": "0.2.13",
+  "description": "",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "keywords": [
+    "XLA"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist && tsc"
+  },
+  "author": "Adam Petroff (BlockCzech)",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blockczechorg/xla-sdk.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blockczechorg/xla-sdk/issues"
+  },
+  "dependencies": {
+    "xla-sdk-core": "^0.3.6"
+  },
+  "peerDependencies": {
+    "react": "17.x.x || 18.x.x"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "ethers": "^5.7.2"
+  },
+  "gitHead": "0006aedeb75320c5407969b766824c69dc15a514"
+}
