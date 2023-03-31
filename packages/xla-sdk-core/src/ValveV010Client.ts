@@ -28,7 +28,6 @@ export class ValveV010Client extends BaseContractV010Client {
   }
 
   /**
-   *
    * @param _recipients - percentage example: 50 (50%)
    * @param options
    * @returns
@@ -55,7 +54,7 @@ export class ValveV010Client extends BaseContractV010Client {
     }
   }
 
-  async setRecipientsAndLockThem(
+  async setRecipientsAndLock(
     _recipients: RecipientWithShareType[],
     options?: ContractCallOptions,
   ) {

@@ -1,6 +1,6 @@
 {
   "name": "xla-sdk-react",
-  "version": "0.2.14",
+  "version": "0.3.0",
   "description": "",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -24,7 +24,7 @@
     "url": "https://github.com/blockczechorg/xla-sdk/issues"
   },
   "dependencies": {
-    "xla-sdk-core": "^0.3.7"
+    "xla-sdk-core": "^0.4.0"
   },
   "peerDependencies": {
     "react": "17.x.x || 18.x.x"
@@ -33,5 +33,5 @@
     "@types/react": "^18.0.28",
     "ethers": "^5.7.2"
   },
-  "gitHead": "0006aedeb75320c5407969b766824c69dc15a514"
+  "gitHead": "a50c28ce26b267eaed642b895020aa17ac111969"
 }

@@ -1,6 +1,6 @@
 {
   "name": "xla-sdk-core",
-  "version": "0.3.7",
+  "version": "0.4.0",
   "description": "",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -34,5 +34,5 @@
     "bignumber.js": "^9.1.1",
     "ethers": "^5.7.2"
   },
-  "gitHead": "0006aedeb75320c5407969b766824c69dc15a514"
+  "gitHead": "a50c28ce26b267eaed642b895020aa17ac111969"
 }
