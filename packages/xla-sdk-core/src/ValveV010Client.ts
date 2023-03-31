@@ -54,7 +54,7 @@ export class ValveV010Client extends BaseContractV010Client {
     }
   }
 
-  async setRecipientsAndLockThem(
+  async setRecipientsAndLock(
     _recipients: RecipientWithShareType[],
     options?: ContractCallOptions,
   ) {
