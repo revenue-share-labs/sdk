@@ -86,8 +86,7 @@ class BaseFactoryV010Client extends OwnableContract {
 }
 
 type CreateValveParams = {
-  controller: string | null
-  isImmutable: boolean
+  controller: string
   isImmutableRecipients: boolean
   isAutoNativeCurrencyDistribution: boolean
   minAutoDistributeAmountInEthers: BigNumberLike
@@ -99,20 +98,14 @@ type CreateValveParams = {
 export class ValveFactoryV010Client extends BaseFactoryV010Client {
   async createValveContract(
     {
-      controller: _controller,
-      isImmutable,
+      controller,
       isImmutableRecipients,
       isAutoNativeCurrencyDistribution,
       minAutoDistributeAmountInEthers,
       distributors,
       recipients,
       creationId,
-    }:
-      | CreateValveParams
-      | (Omit<CreateValveParams, 'controller' | 'isImmutable'> & {
-          isImmutable: true
-          controller: any
-        }),
+    }: CreateValveParams,
     options?: ContractCallOptions,
   ): Promise<ContractReceipt> {
     try {
@@ -120,9 +113,6 @@ export class ValveFactoryV010Client extends BaseFactoryV010Client {
         this.blockchainData.valveFactoryAddress,
         this._signer,
       )
-      const controller = isImmutable
-        ? ethers.constants.AddressZero
-        : _controller || ethers.constants.AddressZero
 
       const { addresses, percentages } =
         valveRecipientsToContractFormat(recipients)
@@ -169,8 +159,7 @@ type InvestorData = {
     }
 )
 type CreatePrepaymentParams = {
-  controller: string | null
-  isImmutable: boolean
+  controller: string
   isImmutableController: boolean
   isAutoNativeCurrencyDistribution: boolean
   minAutoDistributeAmountInEthers: BigNumberLike
@@ -184,8 +173,7 @@ type CreatePrepaymentParams = {
 export class PrepaymentFactoryV010Client extends BaseFactoryV010Client {
   async createPrepaymentContract(
     {
-      controller: _controller,
-      isImmutable,
+      controller,
       isImmutableController,
       isAutoNativeCurrencyDistribution,
       minAutoDistributeAmountInEthers,
@@ -207,9 +195,6 @@ export class PrepaymentFactoryV010Client extends BaseFactoryV010Client {
         this.blockchainData.valveFactoryAddress,
         this._signer,
       )
-      const controller = isImmutable
-        ? ethers.constants.AddressZero
-        : _controller || ethers.constants.AddressZero
 
       const { addresses, percentages } =
         valveRecipientsToContractFormat(recipients)
