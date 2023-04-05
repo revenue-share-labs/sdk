@@ -2,5 +2,10 @@
   "useWorkspaces": true,
   "npmClient": "yarn",
   "version": "independent",
-  "$schema": "node_modules/lerna/schemas/lerna-schema.json"
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+  "command": {
+    "publish": {
+      "registry": "https://github.com/xla-rsc/sdk.git"
+    }
+  }
 }
