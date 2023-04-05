@@ -9,7 +9,7 @@
     "prettier:fix": "prettier --config .prettierrc './**/src/*.{.js,jsx,ts,tsx}' --write",
     "test": "jest",
     "lerna-version": "lerna version --no-private",
-    "publ": "npm run lerna-build && npx lerna publish --no-private"
+    "publish": "npm run lerna-build && npx lerna publish --no-private"
   },
   "workspaces": {
     "packages": [

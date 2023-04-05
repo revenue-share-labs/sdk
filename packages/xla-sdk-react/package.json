@@ -1,6 +1,6 @@
 {
   "name": "xla-sdk-react",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -11,17 +11,17 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf dist && tsc"
   },
-  "author": "Adam Petroff (BlockCzech)",
+  "author": "XLA Revenue Sharing Protocol Team",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/blockczechorg/xla-sdk.git"
+    "url": "git+https://github.com/xla-rsc/sdk.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/blockczechorg/xla-sdk/issues"
+    "url": "https://github.com/xla-rsc/sdk/issues"
   },
   "dependencies": {
     "xla-sdk-core": "^0.4.0"

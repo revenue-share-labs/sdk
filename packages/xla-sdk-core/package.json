@@ -1,6 +1,6 @@
 {
   "name": "xla-sdk-core",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -12,17 +12,17 @@
     "build": "rm -rf dist && tsc && cp -r src/generated dist/",
     "codegen": "typechain --target ethers-v5 --out-dir ./src/generated './src/abi/*.json'"
   },
-  "author": "Adam Petroff (BlockCzech)",
+  "author": "XLA Revenue Sharing Protocol Team",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/blockczechorg/xla-sdk.git"
+    "url": "git+https://github.com/xla-rsc/sdk.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/blockczechorg/xla-sdk/issues"
+    "url": "https://github.com/xla-rsc/sdk/issues"
   },
   "devDependencies": {
     "@typechain/ethers-v5": "^10.2.0",
