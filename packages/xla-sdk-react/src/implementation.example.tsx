@@ -53,7 +53,6 @@ function CreateValveContract({ blockchain }: { blockchain: Blockchain }) {
         {
           controller: '0x123',
           isImmutableRecipients: true,
-          isImmutable: false,
           isAutoNativeCurrencyDistribution: true,
           minAutoDistributeAmountInEthers: '10.5',
           distributors: ['0x123'],
