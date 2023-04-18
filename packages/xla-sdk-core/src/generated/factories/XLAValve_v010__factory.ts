@@ -9,16 +9,6 @@ import type { XLAValve_v010, XLAValve_v010Interface } from "../XLAValve_v010";
 const _abi = [
   {
     inputs: [],
-    name: "ControllerAlreadyConfiguredError",
-    type: "error",
-  },
-  {
-    inputs: [],
-    name: "DistributorAlreadyConfiguredError",
-    type: "error",
-  },
-  {
-    inputs: [],
     name: "ImmutableRecipientsError",
     type: "error",
   },
@@ -55,6 +45,11 @@ const _abi = [
   {
     inputs: [],
     name: "RenounceOwnershipForbidden",
+    type: "error",
+  },
+  {
+    inputs: [],
+    name: "TooLowBalanceToRedistribute",
     type: "error",
   },
   {

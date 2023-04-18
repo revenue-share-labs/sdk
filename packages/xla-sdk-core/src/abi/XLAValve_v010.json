@@ -1,19 +1,54 @@
 [
-  { "inputs": [], "name": "ControllerAlreadyConfiguredError", "type": "error" },
   {
     "inputs": [],
-    "name": "DistributorAlreadyConfiguredError",
+    "name": "ImmutableRecipientsError",
     "type": "error"
   },
-  { "inputs": [], "name": "ImmutableRecipientsError", "type": "error" },
-  { "inputs": [], "name": "InconsistentDataLengthError", "type": "error" },
-  { "inputs": [], "name": "InvalidPercentageError", "type": "error" },
-  { "inputs": [], "name": "NullAddressRecipientError", "type": "error" },
-  { "inputs": [], "name": "OnlyControllerError", "type": "error" },
-  { "inputs": [], "name": "OnlyDistributorError", "type": "error" },
-  { "inputs": [], "name": "RecipientAlreadyAddedError", "type": "error" },
-  { "inputs": [], "name": "RenounceOwnershipForbidden", "type": "error" },
-  { "inputs": [], "name": "TransferFailedError", "type": "error" },
+  {
+    "inputs": [],
+    "name": "InconsistentDataLengthError",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidPercentageError",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "NullAddressRecipientError",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OnlyControllerError",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "OnlyDistributorError",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "RecipientAlreadyAddedError",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "RenounceOwnershipForbidden",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "TooLowBalanceToRedistribute",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "TransferFailedError",
+    "type": "error"
+  },
   {
     "anonymous": false,
     "inputs": [
@@ -173,18 +208,39 @@
     "name": "SetRecipients",
     "type": "event"
   },
-  { "stateMutability": "payable", "type": "fallback" },
+  {
+    "stateMutability": "payable",
+    "type": "fallback"
+  },
   {
     "inputs": [],
     "name": "controller",
-    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
-    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
     "name": "distributors",
-    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
@@ -192,15 +248,27 @@
     "inputs": [],
     "name": "factory",
     "outputs": [
-      { "internalType": "contract IFeeFactory", "name": "", "type": "address" }
+      {
+        "internalType": "contract IFeeFactory",
+        "name": "",
+        "type": "address"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "_owner", "type": "address" },
-      { "internalType": "address", "name": "_controller", "type": "address" },
+      {
+        "internalType": "address",
+        "name": "_owner",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_controller",
+        "type": "address"
+      },
       {
         "internalType": "address[]",
         "name": "_distributors",
@@ -221,7 +289,11 @@
         "name": "_minAutoDistributionAmount",
         "type": "uint256"
       },
-      { "internalType": "uint256", "name": "_platformFee", "type": "uint256" },
+      {
+        "internalType": "uint256",
+        "name": "_platformFee",
+        "type": "uint256"
+      },
       {
         "internalType": "address",
         "name": "_factoryAddress",
@@ -246,58 +318,116 @@
   {
     "inputs": [],
     "name": "isAutoNativeCurrencyDistribution",
-    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "isImmutableRecipients",
-    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "minAutoDistributionAmount",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "numberOfRecipients",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "owner",
-    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "platformFee",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-    "name": "recipients",
     "outputs": [
-      { "internalType": "address payable", "name": "", "type": "address" }
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
   },
   {
-    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "recipients",
+    "outputs": [
+      {
+        "internalType": "address payable",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
     "name": "recipientsPercentage",
-    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "view",
     "type": "function"
   },
@@ -310,7 +440,11 @@
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "_token", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "_token",
+        "type": "address"
+      }
     ],
     "name": "redistributeToken",
     "outputs": [],
@@ -339,7 +473,11 @@
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "_controller", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "_controller",
+        "type": "address"
+      }
     ],
     "name": "setController",
     "outputs": [],
@@ -348,8 +486,16 @@
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "_distributor", "type": "address" },
-      { "internalType": "bool", "name": "_isDistributor", "type": "bool" }
+      {
+        "internalType": "address",
+        "name": "_distributor",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "_isDistributor",
+        "type": "bool"
+      }
     ],
     "name": "setDistributor",
     "outputs": [],
@@ -414,12 +560,19 @@
   },
   {
     "inputs": [
-      { "internalType": "address", "name": "newOwner", "type": "address" }
+      {
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
     ],
     "name": "transferOwnership",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
   },
-  { "stateMutability": "payable", "type": "receive" }
+  {
+    "stateMutability": "payable",
+    "type": "receive"
+  }
 ]
