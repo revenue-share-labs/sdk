@@ -5,7 +5,7 @@ import {
   XLAPrepaymentFactory_v010__factory,
   XLAValveFactory_v010__factory,
 } from './generated/factories'
-import { XLARSCValveFactory } from './generated/XLAValveFactory_v010'
+import { XLAValveFactory } from './generated/XLAValveFactory_v010'
 import {
   BigNumberLike,
   ContractCallOptions,
@@ -117,7 +117,7 @@ export class ValveFactoryV010Client extends BaseFactoryV010Client {
       const { addresses, percentages } =
         valveRecipientsToContractFormat(recipients)
 
-      const data: XLARSCValveFactory.RSCCreateDataStruct = {
+      const data: XLAValveFactory.RSCValveCreateDataStruct = {
         controller,
         isImmutableRecipients: isImmutableRecipients,
         isAutoNativeCurrencyDistribution: isAutoNativeCurrencyDistribution,
