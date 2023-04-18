@@ -60,7 +60,7 @@ export declare namespace XLAValveFactory {
   };
 }
 
-export interface XLAValveFactory extends utils.Interface {
+export interface XLAValveFactory_v010Interface extends utils.Interface {
   functions: {
     "contractImplementation()": FunctionFragment;
     "createRSCValve((address,address[],bool,bool,uint256,address[],uint256[],bytes32))": FunctionFragment;
@@ -234,12 +234,12 @@ export type RSCValveCreatedEvent = TypedEvent<
 
 export type RSCValveCreatedEventFilter = TypedEventFilter<RSCValveCreatedEvent>;
 
-export interface RSCValveFactory extends BaseContract {
+export interface XLAValveFactory_v010 extends BaseContract {
   connect(signerOrProvider: Signer | Provider | string): this;
   attach(addressOrName: string): this;
   deployed(): Promise<this>;
 
-  interface: XLAValveFactory;
+  interface: XLAValveFactory_v010Interface;
 
   queryFilter<TEvent extends TypedEvent>(
     event: TypedEventFilter<TEvent>,
