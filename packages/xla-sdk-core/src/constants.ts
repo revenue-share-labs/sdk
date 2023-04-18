@@ -24,7 +24,7 @@ export enum CONTRACT_VERSIONS {
 export const FACTORIES = {
   ETH: {
     VALVE: {
-      LATEST: '',
+      LATEST: FACTORY_VALVE_ETH_V010,
       [CONTRACT_VERSIONS.V010]: FACTORY_VALVE_ETH_V010,
     },
   },
