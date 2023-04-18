@@ -27,8 +27,8 @@ import type {
   PromiseOrValue,
 } from "./common";
 
-export declare namespace XLARSCValveFactory {
-  export type RSCCreateDataStruct = {
+export declare namespace XLAValveFactory {
+  export type RSCValveCreateDataStruct = {
     controller: PromiseOrValue<string>;
     distributors: PromiseOrValue<string>[];
     isImmutableRecipients: PromiseOrValue<boolean>;
@@ -39,7 +39,7 @@ export declare namespace XLARSCValveFactory {
     creationId: PromiseOrValue<BytesLike>;
   };
 
-  export type RSCCreateDataStructOutput = [
+  export type RSCValveCreateDataStructOutput = [
     string,
     string[],
     boolean,
@@ -60,7 +60,7 @@ export declare namespace XLARSCValveFactory {
   };
 }
 
-export interface XLAValveFactory_v010Interface extends utils.Interface {
+export interface XLAValveFactory extends utils.Interface {
   functions: {
     "contractImplementation()": FunctionFragment;
     "createRSCValve((address,address[],bool,bool,uint256,address[],uint256[],bytes32))": FunctionFragment;
@@ -96,7 +96,7 @@ export interface XLAValveFactory_v010Interface extends utils.Interface {
   ): string;
   encodeFunctionData(
     functionFragment: "createRSCValve",
-    values: [XLARSCValveFactory.RSCCreateDataStruct]
+    values: [XLAValveFactory.RSCValveCreateDataStruct]
   ): string;
   encodeFunctionData(functionFragment: "owner", values?: undefined): string;
   encodeFunctionData(
@@ -109,7 +109,7 @@ export interface XLAValveFactory_v010Interface extends utils.Interface {
   ): string;
   encodeFunctionData(
     functionFragment: "predictDeterministicAddress",
-    values: [XLARSCValveFactory.RSCCreateDataStruct, PromiseOrValue<string>]
+    values: [XLAValveFactory.RSCValveCreateDataStruct, PromiseOrValue<string>]
   ): string;
   encodeFunctionData(
     functionFragment: "renounceOwnership",
@@ -234,12 +234,12 @@ export type RSCValveCreatedEvent = TypedEvent<
 
 export type RSCValveCreatedEventFilter = TypedEventFilter<RSCValveCreatedEvent>;
 
-export interface XLAValveFactory_v010 extends BaseContract {
+export interface RSCValveFactory extends BaseContract {
   connect(signerOrProvider: Signer | Provider | string): this;
   attach(addressOrName: string): this;
   deployed(): Promise<this>;
 
-  interface: XLAValveFactory_v010Interface;
+  interface: XLAValveFactory;
 
   queryFilter<TEvent extends TypedEvent>(
     event: TypedEventFilter<TEvent>,
@@ -264,7 +264,7 @@ export interface XLAValveFactory_v010 extends BaseContract {
     contractImplementation(overrides?: CallOverrides): Promise<[string]>;
 
     createRSCValve(
-      _data: XLARSCValveFactory.RSCCreateDataStruct,
+      _data: XLAValveFactory.RSCValveCreateDataStruct,
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<ContractTransaction>;
 
@@ -275,7 +275,7 @@ export interface XLAValveFactory_v010 extends BaseContract {
     platformWallet(overrides?: CallOverrides): Promise<[string]>;
 
     predictDeterministicAddress(
-      _data: XLARSCValveFactory.RSCCreateDataStruct,
+      _data: XLAValveFactory.RSCValveCreateDataStruct,
       _deployer: PromiseOrValue<string>,
       overrides?: CallOverrides
     ): Promise<[string]>;
@@ -305,7 +305,7 @@ export interface XLAValveFactory_v010 extends BaseContract {
   contractImplementation(overrides?: CallOverrides): Promise<string>;
 
   createRSCValve(
-    _data: XLARSCValveFactory.RSCCreateDataStruct,
+    _data: XLAValveFactory.RSCValveCreateDataStruct,
     overrides?: Overrides & { from?: PromiseOrValue<string> }
   ): Promise<ContractTransaction>;
 
@@ -316,7 +316,7 @@ export interface XLAValveFactory_v010 extends BaseContract {
   platformWallet(overrides?: CallOverrides): Promise<string>;
 
   predictDeterministicAddress(
-    _data: XLARSCValveFactory.RSCCreateDataStruct,
+    _data: XLAValveFactory.RSCValveCreateDataStruct,
     _deployer: PromiseOrValue<string>,
     overrides?: CallOverrides
   ): Promise<string>;
@@ -346,7 +346,7 @@ export interface XLAValveFactory_v010 extends BaseContract {
     contractImplementation(overrides?: CallOverrides): Promise<string>;
 
     createRSCValve(
-      _data: XLARSCValveFactory.RSCCreateDataStruct,
+      _data: XLAValveFactory.RSCValveCreateDataStruct,
       overrides?: CallOverrides
     ): Promise<string>;
 
@@ -357,7 +357,7 @@ export interface XLAValveFactory_v010 extends BaseContract {
     platformWallet(overrides?: CallOverrides): Promise<string>;
 
     predictDeterministicAddress(
-      _data: XLARSCValveFactory.RSCCreateDataStruct,
+      _data: XLAValveFactory.RSCValveCreateDataStruct,
       _deployer: PromiseOrValue<string>,
       overrides?: CallOverrides
     ): Promise<string>;
@@ -436,7 +436,7 @@ export interface XLAValveFactory_v010 extends BaseContract {
     contractImplementation(overrides?: CallOverrides): Promise<BigNumber>;
 
     createRSCValve(
-      _data: XLARSCValveFactory.RSCCreateDataStruct,
+      _data: XLAValveFactory.RSCValveCreateDataStruct,
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<BigNumber>;
 
@@ -447,7 +447,7 @@ export interface XLAValveFactory_v010 extends BaseContract {
     platformWallet(overrides?: CallOverrides): Promise<BigNumber>;
 
     predictDeterministicAddress(
-      _data: XLARSCValveFactory.RSCCreateDataStruct,
+      _data: XLAValveFactory.RSCValveCreateDataStruct,
       _deployer: PromiseOrValue<string>,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
@@ -480,7 +480,7 @@ export interface XLAValveFactory_v010 extends BaseContract {
     ): Promise<PopulatedTransaction>;
 
     createRSCValve(
-      _data: XLARSCValveFactory.RSCCreateDataStruct,
+      _data: XLAValveFactory.RSCValveCreateDataStruct,
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<PopulatedTransaction>;
 
@@ -491,7 +491,7 @@ export interface XLAValveFactory_v010 extends BaseContract {
     platformWallet(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     predictDeterministicAddress(
-      _data: XLARSCValveFactory.RSCCreateDataStruct,
+      _data: XLAValveFactory.RSCValveCreateDataStruct,
       _deployer: PromiseOrValue<string>,
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
