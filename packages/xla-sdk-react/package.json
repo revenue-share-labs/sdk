@@ -24,14 +24,14 @@
     "url": "https://github.com/xla-rsc/sdk/issues"
   },
   "dependencies": {
-    "xla-sdk-core": "^0.4.0"
+    "xla-sdk-core": "^1.1.2"
   },
   "peerDependencies": {
     "react": "17.x.x || 18.x.x"
   },
   "devDependencies": {
-    "@types/react": "^18.0.28",
-    "ethers": "^5.7.2"
+    "@types/react": "^18.0.37",
+    "ethers": "^6.3.0"
   },
   "gitHead": "a50c28ce26b267eaed642b895020aa17ac111969"
 }
