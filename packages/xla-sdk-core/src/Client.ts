@@ -41,9 +41,10 @@ import { ValveV010Client } from './ValveV010Client'
  */
 export default class XLAClient extends BaseClient {
   public static supportedBlockchains: Blockchain[] = [
-    // 'POLYGON',
+    'POLYGON',
+    'ETH',
     'MUMBAI',
-    // 'GOERLI',
+    'GOERLI',
   ]
 
   public static _factories = FACTORIES
