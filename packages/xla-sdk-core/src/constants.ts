@@ -6,9 +6,10 @@ export type BlockchainData = {
 }
 
 // export type Blockchain = 'POLYGON' | 'ETH' | 'MUMBAI' | 'GOERLI'
-export type Blockchain = 'MUMBAI' | 'GOERLI' | 'ETH'
+export type Blockchain = 'POLYGON' | 'MUMBAI' | 'GOERLI' | 'ETH'
 
 const FACTORY_VALVE_ETH_V010 = '0x4A718B41C3FA541c2A5fA4D98A1D7Ec2376Fc309'
+const FACTORY_VALVE_POLYGON_V010 = '0x4A718B41C3FA541c2A5fA4D98A1D7Ec2376Fc309'
 
 const FACTORY_VALVE_MUMBAI_V010 = '0xd56bAdc80032D5B618A5269225F9B94734532Bc8'
 const FACTORY_PREPAYMENT_MUMBAI_V010 =
@@ -27,10 +28,12 @@ export const FACTORIES = {
       [CONTRACT_VERSIONS.V010]: FACTORY_VALVE_ETH_V010,
     },
   },
-  // POLYGON: {
-  //   LATEST: FACTORY_VALVE_POLYGON_V002,
-  //   [SUPPORTED_CONTRACT_VERSIONS.V010]: FACTORY_VALVE_POLYGON_V002,
-  // },
+  POLYGON: {
+    VALVE: {
+      LATEST: FACTORY_VALVE_POLYGON_V010,
+      [CONTRACT_VERSIONS.V010]: FACTORY_VALVE_POLYGON_V010,
+    },
+  },
   GOERLI: {
     VALVE: {
       LATEST: FACTORY_VALVE_GOERLI_V010,
@@ -54,11 +57,12 @@ export const FACTORIES = {
 } as const
 
 export const BLOCKCHAIN_DATA: Record<Blockchain, BlockchainData> = {
-  // ['POLYGON']: {
-  //   chainId: 137,
-  //   valveFactoryAddress: FACTORIES.POLYGON.LATEST,
-  //   currencyName: 'MATIC',
-  // },
+  ['POLYGON']: {
+    chainId: 137,
+    valveFactoryAddress: FACTORIES.POLYGON.VALVE.LATEST,
+    prepaymentFactoryAddress: '',
+    currencyName: 'MATIC',
+  },
   ['ETH']: {
     chainId: 1,
     valveFactoryAddress: FACTORIES.ETH.VALVE.LATEST,
