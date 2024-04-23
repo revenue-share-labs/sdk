@@ -1,6 +1,6 @@
-# XLA SDK
+# RSC SDK
 
-JavaScript SDK for XLA Contracts
+JavaScript SDK for RSC Contracts
 
 ## Packages
 
